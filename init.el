@@ -123,7 +123,6 @@
 (require 'init-dash)
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
-
 (require-package 'gnuplot)
 (require-package 'lua-mode)
 (require-package 'htmlize)
@@ -132,6 +131,7 @@
   (require-package 'osx-location))
 (require-package 'regex-tool)
 
+(require 'init-evil)
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
 ;;----------------------------------------------------------------------------
