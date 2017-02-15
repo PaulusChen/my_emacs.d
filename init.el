@@ -103,6 +103,14 @@
 (require 'init-slime)
 (require 'init-common-lisp)
 
+(require 'init-xcscope)
+(require 'init-helm)
+(require 'init-ctags)
+(require 'init-semantic)
+;;(require 'init-doxygen)
+(require 'init-lua-mode)
+(require 'init-yasnippet)
+
 (when *spell-check-support-enabled*
   (require 'init-spelling))
 
