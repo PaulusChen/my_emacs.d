@@ -1,26 +1,18 @@
-[![Build Status](https://travis-ci.org/purcell/emacs.d.png?branch=master)](https://travis-ci.org/purcell/emacs.d)
 
-# A reasonable Emacs config
+# A personal Emacs config forked from purcell/emacs.d
+=====
 
-This is my emacs configuration tree, continually used and tweaked
-since 2000, and it may be a good starting point for other Emacs
-users, especially those who are web developers. These days it's
-somewhat geared towards OS X, but it is known to also work on Linux
-and Windows.
+This is my emacs configuration tree, forked from purcell/emacs.d
 
-Emacs itself comes with support for many programming languages. This
-config adds improved defaults and extended support for the following:
+This config adds improved defaults and extended support for the following:
 
-* Ruby / Ruby on Rails
-* CSS / LESS / SASS / SCSS
+* C/C++
+* Git
 * HAML / Markdown / Textile / ERB
-* Clojure (with Cider and nRepl)
-* Javascript / Coffeescript
 * Python
-* PHP
-* Haskell
-* Elm
-* Erlang
+* Lisp
+* Doxygen
+* dot (graphviz)
 * Common Lisp (with Slime)
 
 In particular, there's a nice config for *autocompletion* with
@@ -54,7 +46,7 @@ To install, clone this repo to `~/.emacs.d`, i.e. ensure that the
 `init.el` contained in this repo ends up at `~/.emacs.d/init.el`:
 
 ```
-git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
+git clone https://github.com/JamesChenFromChina/my_emacs.d.git ~/.emacs.d
 ```
 
 Upon starting up Emacs for the first time, further third-party
@@ -116,15 +108,12 @@ You might also want to check out `emacs-starter-kit` and `prelude`.
 If you hit any problems, please first ensure that you are using the latest version
 of this code, and that you have updated your packages to the most recent available
 versions (see "Updates" above). If you still experience problems, go ahead and
-[file an issue on the github project](https://github.com/purcell/emacs.d).
+[file an issue on the github project](https://github.com/JamesChenFromChina/my_emacs.d).
 
--Steve Purcell
+-James Chen
 
 <hr>
 
-[![](http://api.coderwall.com/purcell/endorsecount.png)](http://coderwall.com/purcell)
-
-[![](http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png)](http://uk.linkedin.com/in/stevepurcell)
 
 [sanityinc.com](http://www.sanityinc.com/)
 
