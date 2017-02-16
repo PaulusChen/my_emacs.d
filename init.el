@@ -48,6 +48,9 @@
 (require-package 'diminish)
 (require-package 'scratch)
 (require-package 'mwe-log-commands)
+(require-package 'ace-window)
+(require-package 'bookmark+)
+;(require-package 'auto-save)
 
 (require 'init-frame-hooks)
 (require 'init-xterm)
