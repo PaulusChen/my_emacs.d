@@ -50,7 +50,8 @@
 (require-package 'mwe-log-commands)
 (require-package 'ace-window)
 (require-package 'bookmark+)
-;(require-package 'auto-save)
+                                        ;(require-package 'auto-save)
+(require-package 'window-numbering)
 
 (require 'init-frame-hooks)
 (require 'init-xterm)
@@ -107,7 +108,7 @@
 (require 'init-common-lisp)
 
 ;; (require 'init-xcscope)
-(require 'init-helm)
+;; (require 'init-helm)
 (require 'init-ctags)
 (require 'init-semantic)
 ;;(require 'init-doxygen)
@@ -127,7 +128,6 @@
 (require-package 'gnuplot)
 (require-package 'htmlize)
 (require-package 'dsvn)
-(require-package 'window-numbering)
 
 (when *is-a-mac*
   (require-package 'osx-location))
