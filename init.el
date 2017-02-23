@@ -50,7 +50,7 @@
 (require-package 'mwe-log-commands)
 (require-package 'ace-window)
 (require-package 'bookmark+)
-                                        ;(require-package 'auto-save)
+(require-package 'general)
 (require-package 'window-numbering)
 
 (require 'init-frame-hooks)
@@ -115,6 +115,7 @@
 (require 'init-lua-mode)
 (require 'init-yasnippet)
 (require 'init-gtags)
+(require 'init-which-key)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))
