@@ -1,3 +1,4 @@
+(require-package 'evil)
 (setq evil-symbol-word-search t)
 (require 'evil)
 
@@ -11,8 +12,8 @@
 
 (evil-mode 1)
 (require-package 'evil-surround)
-
 (require 'evil-surround)
+
 (global-evil-surround-mode 1)
 (defun evil-surround-prog-mode-hook-setup ()
   (push '(47 . ("/" . "/")) evil-surround-pairs-alist)
@@ -28,6 +29,7 @@
 
 (require-package 'evil-visualstar)
 (require 'evil-visualstar)
+
 (setq evil-visualstar/persistent t)
 (global-evil-visualstar-mode t)
 
@@ -196,6 +198,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
 
 (require-package 'evil-escape)
 (require 'evil-escape)
+
 (setq-default evil-escape-delay 0.5)
 (setq evil-escape-excluded-major-modes '(dired-mode))
 (setq-default evil-escape-key-sequence "kj")
@@ -272,10 +275,12 @@ If the character before and after CH is space or tab, CH is NOT slash"
 (define-key evil-normal-state-map (kbd "C-]") 'etags-select-find-tag-at-point)
 (define-key evil-visual-state-map (kbd "C-]") 'etags-select-find-tag-at-point)
 
+(require-package 'evil-numbers)
 (require 'evil-numbers)
 (define-key evil-normal-state-map "+" 'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map "-" 'evil-numbers/dec-at-pt)
 
+(require-package 'evil-matchit)
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
 
@@ -298,6 +303,8 @@ If the character before and after CH is space or tab, CH is NOT slash"
 ;; My frequently used commands are listed here
 ;; For example, for line like `"ef" 'end-of-defun`
 ;;   You can either press `,ef` or `M-x end-of-defun` to execute it
+
+(require-package 'general)
 (require 'general)
 (general-evil-setup t)
 
@@ -596,11 +603,14 @@ If the character before and after CH is space or tab, CH is NOT slash"
                 (set-face-background 'mode-line (car color))
                 (set-face-foreground 'mode-line (cdr color))))))
 
+(require-package 'evil-nerd-commenter)
 (require 'evil-nerd-commenter)
 (evilnc-default-hotkeys)
 
 ;; {{ evil-exchange
 ;; press gx twice to exchange, gX to cancel
+
+(require-package 'evil-exchange)
 (require 'evil-exchange)
 ;; change default key bindings (if you want) HERE
 ;; (setq evil-exchange-key (kbd "zx"))
