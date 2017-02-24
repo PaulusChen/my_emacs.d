@@ -43,3 +43,5 @@ site-lisp/package/
 /viper
 /projectile-bookmarks.eld
 /anaconda-mode/
+/semanticdb/
+/company-statistics-cache.el
