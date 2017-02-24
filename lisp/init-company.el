@@ -6,21 +6,30 @@
 ;; Stop completion-at-point from popping up completion buffers so eagerly
 (setq completion-cycle-threshold 5)
 
+(if (fboundp 'evil-declare-change-repeat)
+    (mapc #'evil-declare-change-repeat
+          '(company-complete-common
+            company-select-next
+            company-select-previous
+            company-complete-selection
+            company-complete-number)))
 
 (when (maybe-require-package 'company)
   (add-hook 'after-init-hook 'global-company-mode)
+  (global-set-key (kbd "M-C-/") 'company-complete)
+  (defun sanityinc/local-push-company-backend (backend)
+    "Add BACKEND to a buffer-local version of `company-backends'."
+    (set (make-local-variable 'company-backends)
+         (append (list backend) company-backends)))
   (after-load 'company
     (diminish 'company-mode "CMP")
     (define-key company-mode-map (kbd "M-/") 'company-complete)
     (define-key company-active-map (kbd "M-/") 'company-select-next)
     (setq-default company-backends '((company-capf company-dabbrev-code) company-dabbrev)
-                  company-dabbrev-other-buffers 'all))
-  (global-set-key (kbd "M-C-/") 'company-complete)
-  (defun sanityinc/local-push-company-backend (backend)
-    "Add BACKEND to a buffer-local version of `company-backends'."
-    (set (make-local-variable 'company-backends)
-         (append (list backend) company-backends))))
-
+                  company-dabbrev-other-buffers 'all)
+    (sanityinc/local-push-company-backend 'company-cmake)
+    (require-package 'company-c-headers)
+    (sanityinc/local-push-company-backend 'company-c-headers)))
 
 ;; Suspend page-break-lines-mode while company menu is active
 ;; (see https://github.com/company-mode/company-mode/issues/416)
