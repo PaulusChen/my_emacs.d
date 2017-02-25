@@ -1,3 +1,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = git@github.com:JamesChenFromChina/yasnippet-snippets.git
+[submodule "ycmd"]
+	path = ycmd
+	url = https://github.com/Valloric/ycmd
