@@ -8,6 +8,10 @@
 (when (version<= emacs-version "24")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
+(defvar best-gc-cons-threshold 4000000 "Best default gc threshold value. Should't be too big.")
+;; don't GC during startup to save time
+(setq gc-cons-threshold most-positive-fixnum)
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-benchmarking) ;; Measure startup time
 
@@ -161,6 +165,7 @@
 ;;----------------------------------------------------------------------------
 (require 'init-locales)
 
+(setq gc-cons-threshold best-gc-cons-threshold)
 
 (provide 'init)
 
