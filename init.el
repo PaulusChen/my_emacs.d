@@ -120,11 +120,9 @@
 (require 'init-yasnippet)
 (require 'init-gtags)
 (require 'init-which-key)
-
 (when *spell-check-support-enabled*
   (require 'init-spelling))
-
-(require 'init-misc)
+(require 'init-evil)
 
 (require 'init-folding)
 (require 'init-dash)
@@ -133,12 +131,12 @@
 (require-package 'gnuplot)
 (require-package 'htmlize)
 (require-package 'dsvn)
+(require 'init-misc)
 
 (when *is-a-mac*
   (require-package 'osx-location))
 (require-package 'regex-tool)
 
-(require 'init-evil)
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
 ;;----------------------------------------------------------------------------
