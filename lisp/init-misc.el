@@ -301,6 +301,7 @@
 ;; some project prefer tab, so be it
 ;; @see http://stackoverflow.com/questions/69934/set-4-space-indent-in-emacs-in-text-mode
 (setq-default tab-width 4)
+(setq tab-width 4)
 
 (setq history-delete-duplicates t)
 
@@ -719,6 +720,8 @@ If step is -1, go backward."
   (interactive)
   (setq indent-tabs-mode (not indent-tabs-mode))
   (message "indent-tabs-mode=%s" indent-tabs-mode))
+
+(my-toggle-indentation)
 
 ;; {{ regular expression tools
 (defun my-create-regex-from-kill-ring (&optional n)

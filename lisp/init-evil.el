@@ -518,35 +518,55 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "gr" 'git-gutter-reset-to-default
        "ps" 'profiler-start
        "pr" 'profiler-report
-       "bf" 'beginning-of-defun
-       "bu" 'backward-up-list
-       "bb" 'back-to-previous-buffer
-       "ef" 'end-of-defun
-       "uk" 'gud-kill-yes
-       "ur" 'gud-remove
-       "ud" 'my-gud-gdb
        "cc" 'compile  ;; Mine chenpeng 20160519
+       ;;Debug
        "dg" 'gdb
-       "ub" 'gud-break
-       "uu" 'gud-run
-       "up" 'gud-print
-       "ue" 'gud-cls
-       "un" 'gud-next
-       "us" 'gud-step
-       "ui" 'gud-stepi
-       "uc" 'gud-cont
-       "uf" 'gud-finish
+       "db" 'gud-break
+       "dk" 'gud-kill-yes
+       "dr" 'gud-remove
+       "dd" 'my-gud-gdb
+       "du" 'gud-run
+       "dp" 'gud-print
+       "dl" 'gud-cls
+       "dn" 'gud-next
+       "ds" 'gud-step
+       "di" 'gud-stepi
+       "dc" 'gud-cont
+       "df" 'gud-finish
        "dw" 'gdb-many-windows
 
-       "ww" 'narrow-or-widen-dwim
-       "xnw" 'widen
-       "xnd" 'narrow-to-defun
-       "xnr" 'narrow-to-region
-       "bf" 'beginning-of-defun
-       "bu" 'backward-up-list
+       ;;Format
+       "fi" 'indent-region
+
+       ;;Explore
+       "ef" 'beginning-of-defun
+       "eu" 'backward-up-list
+       "ejb" 'back-to-previous-buffer
+       "ejn" 'next-buffer
+       "ebf" 'beginning-of-defun
+       "ebl" 'backward-up-list
+
+       "egd" 'ggtags-find-definition
+       "egr" 'ggtags-find-reference
+       "egf" 'ggtags-find-file
+       "egt" 'ggtags-find-tag
+       "ep" 'previous-buffer
+       "ef" 'evil-show-file-info
+       "el" 'helm-imenu
+       "eip" 'find-file-in-project
+       "es" 'helm-semantic-or-imenu
+       "ef" 'end-of-defun
+       "ews" 'narrow-or-widen-dwim
+       "eww" 'widen
+       "ewd" 'narrow-to-defun
+       "ewr" 'narrow-to-region
        "bb" 'back-to-previous-buffer
        "ef" 'end-of-defun
        "mf" 'mark-defun
+
+       ;; bookmark
+       "bs" 'bookmark-set
+       "bl" 'list-bookmarks
        ;; select window
        "0" 'select-window-0
        "1" 'select-window-1

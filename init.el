@@ -56,6 +56,7 @@
 (require-package 'bookmark+)
 (require-package 'general)
 (require-package 'window-numbering)
+(require-package 'find-file-in-project)
 
 (require 'init-frame-hooks)
 (require 'init-xterm)
@@ -144,19 +145,16 @@
 (unless (server-running-p)
   (server-start))
 
-
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
 (when (file-exists-p custom-file)
   (load custom-file))
 
-
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-local" containing personal settings
 ;;----------------------------------------------------------------------------
 (require 'init-local nil t)
-
 
 ;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
