@@ -90,8 +90,8 @@
 
 (require 'init-vc)
 (require 'init-darcs)
-(require 'init-git)
-(require 'init-github)
+                                        ;(require 'init-git)
+                                        ;(require 'init-github)
 
 (require 'init-projectile)
 
@@ -110,8 +110,9 @@
 
 (require 'init-paredit)
 (require 'init-lisp)
-(require 'init-slime)
-(require 'init-common-lisp)
+                                        ;(require 'init-slime)
+                                        ;(require 'init-common-lisp)
+
 
 ;; (require 'init-xcscope)
 ;; (require 'init-helm)
