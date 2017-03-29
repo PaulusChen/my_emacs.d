@@ -80,7 +80,7 @@
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
-(require 'init-sessions)
+                                        ;(require 'init-sessions)
 (require 'init-fonts)
 (require 'init-mmm)
 
@@ -125,6 +125,9 @@
 (when *spell-check-support-enabled*
   (require 'init-spelling))
 (require 'init-evil)
+
+(require 'init-xcscope)
+;(require 'init-ycmd)
 
 (require 'init-folding)
 (require 'init-dash)
