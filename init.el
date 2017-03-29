@@ -1,4 +1,3 @@
-
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
 
@@ -32,7 +31,8 @@
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(require 'init-compat)
+
+;; (require 'init-compat)
 (require 'init-utils)
 (require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
 ;; Calls (package-initialize)
@@ -62,44 +62,33 @@
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
-(require 'init-osx-keys)
-(require 'init-gui-frames)
 (require 'init-dired)
 (require 'init-isearch)
 (require 'init-grep)
 (require 'init-uniquify)
 (require 'init-ibuffer)
-(require 'init-flycheck)
+;; (require 'init-flycheck)
 
-;; (require 'init-recentf)
-(require 'init-smex)
+;; (require 'init-smex)
 ;; If you really prefer ido to ivy, change the comments below. I will
 ;; likely remove the ido config in due course, though.
 ;; (require 'init-ido)
-;; (require 'init-ivy)
-(require 'init-hippie-expand)
+(require 'init-ivy)
+;; (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
-;; (require 'init-sessions)
-(require 'init-fonts)
-(require 'init-mmm)
+;; (require 'init-fonts)
+;; (require 'init-mmm)
 
 (require 'init-editing-utils)
 (require 'init-whitespace)
-(require 'init-fci)
 
 (require 'init-vc)
-;; (require 'init-darcs)
-;; (require 'init-git)
-;; (require 'init-github)
-
 (require 'init-projectile)
-
 (require 'init-compile)
 (require 'init-crontab)
 (require 'init-textile)
 (require 'init-markdown)
-;; (require 'init-csv)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-html)
@@ -107,40 +96,50 @@
 (require 'init-python-mode)
 (require 'init-elm)
 (require 'init-sql)
-
 (require 'init-paredit)
 (require 'init-lisp)
 
-;; (require 'init-slime)
-;; (require 'init-common-lisp)
-
 (require 'init-helm)
 (require 'init-ctags)
+(require 'init-xcscope)
 (require 'init-semantic)
-;;(require 'init-doxygen)
 (require 'init-lua-mode)
-(require 'init-yasnippet)
+;; (require 'init-yasnippet)
 (require 'init-gtags)
 (require 'init-which-key)
+(require 'init-ycmd)
+
 (when *spell-check-support-enabled*
   (require 'init-spelling))
+
 (require 'init-evil)
 
-(require 'init-xcscope)
-;; (require 'init-ycmd)
-
-(require 'init-folding)
+;; (require 'init-folding)
+;; (require 'init-fci)
+;; (require 'init-osx-keys)
+;; (require 'init-gui-frames)
+;; (require 'init-darcs)
+;; (require 'init-git)
+;; (require 'init-github)
+;; (require 'init-slime)
+;; (require 'init-common-lisp)
+;; (require 'init-doxygen)
+;; (require 'init-csv)
+;; (require 'init-recentf)
+;; (require 'init-sessions)
 ;; (require 'init-dash)
-(require 'init-ledger)
+;; (require 'init-ledger)
+
 ;; Extra packages which don't require any configuration
-(require-package 'gnuplot)
-(require-package 'htmlize)
-(require-package 'dsvn)
-(require 'init-misc)
+;; (require-package 'gnuplot)
+;; (require-package 'htmlize)
+;; (require-package 'dsvn)
 
 (when *is-a-mac*
   (require-package 'osx-location))
 (require-package 'regex-tool)
+
+(require 'init-misc)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
