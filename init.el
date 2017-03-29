@@ -71,16 +71,16 @@
 (require 'init-ibuffer)
 (require 'init-flycheck)
 
-(require 'init-recentf)
+;; (require 'init-recentf)
 (require 'init-smex)
 ;; If you really prefer ido to ivy, change the comments below. I will
 ;; likely remove the ido config in due course, though.
 ;; (require 'init-ido)
-(require 'init-ivy)
+;; (require 'init-ivy)
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
-                                        ;(require 'init-sessions)
+;; (require 'init-sessions)
 (require 'init-fonts)
 (require 'init-mmm)
 
@@ -89,9 +89,9 @@
 (require 'init-fci)
 
 (require 'init-vc)
-(require 'init-darcs)
-                                        ;(require 'init-git)
-                                        ;(require 'init-github)
+;; (require 'init-darcs)
+;; (require 'init-git)
+;; (require 'init-github)
 
 (require 'init-projectile)
 
@@ -99,7 +99,7 @@
 (require 'init-crontab)
 (require 'init-textile)
 (require 'init-markdown)
-(require 'init-csv)
+;; (require 'init-csv)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-html)
@@ -110,12 +110,11 @@
 
 (require 'init-paredit)
 (require 'init-lisp)
-                                        ;(require 'init-slime)
-                                        ;(require 'init-common-lisp)
 
+;; (require 'init-slime)
+;; (require 'init-common-lisp)
 
-;; (require 'init-xcscope)
-;; (require 'init-helm)
+(require 'init-helm)
 (require 'init-ctags)
 (require 'init-semantic)
 ;;(require 'init-doxygen)
@@ -128,10 +127,10 @@
 (require 'init-evil)
 
 (require 'init-xcscope)
-;(require 'init-ycmd)
+;; (require 'init-ycmd)
 
 (require 'init-folding)
-(require 'init-dash)
+;; (require 'init-dash)
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
 (require-package 'gnuplot)
