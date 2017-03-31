@@ -107,7 +107,7 @@
 ;; (require 'init-yasnippet)
 (require 'init-gtags)
 (require 'init-which-key)
-(require 'init-ycmd)
+;; (require 'init-ycmd)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))

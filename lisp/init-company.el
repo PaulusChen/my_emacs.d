@@ -27,6 +27,7 @@
     (define-key company-active-map (kbd "M-/") 'company-select-next)
     (setq-default company-backends '((company-capf company-dabbrev-code) company-dabbrev)
                   company-dabbrev-other-buffers 'all)
+    (setq company-backends (delete 'company-semantic company-backends))
     (sanityinc/local-push-company-backend 'company-cmake)
     (require-package 'company-c-headers)
     (sanityinc/local-push-company-backend 'company-c-headers)))
